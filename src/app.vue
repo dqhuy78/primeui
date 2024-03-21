@@ -2,7 +2,9 @@
 import { ref } from 'vue';
 import { useToast } from 'primevue/usetoast';
 import { useRouter } from 'vue-router';
+
 import SpeedDial from 'primevue/speeddial';
+import Toast from 'primevue/toast';
 
 const toast = useToast();
 const router = useRouter();
@@ -49,8 +51,8 @@ const items = ref([
 
 <template>
   <div class="bg-white w-screen h-screen flex items-center justify-center">
-    <Toast />
     <SpeedDial :model="items" :radius="80" type="semi-circle" direction="up" />
+    <Toast />
   </div>
 </template>
 
